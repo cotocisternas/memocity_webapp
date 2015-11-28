@@ -1,0 +1,13 @@
+<% provide(:title, "Usuarios") %>
+<h1><%= yield(:title) %></h1>
+
+<%= will_paginate %>
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to user.name.capitalize, user %>, <%= user.mobile_num %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

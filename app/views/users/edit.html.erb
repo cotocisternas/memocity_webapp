@@ -1,0 +1,19 @@
+<% provide(:title, 'Actualizar perfil') %>
+<h1><%= yield(:title) %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+    <%= f.text_field :name, class:"form-control", placeholder: "Nombre" %>
+    <%= f.text_field :last_name, class:"form-control", placeholder: "Apellido" %>
+    <%= f.email_field :email, class:"form-control", placeholder: "Correo" %>
+    <%= f.text_field :mobile_num, class:"form-control" ,placeholder: "Número de móvil, ejemplo: 5691234567" %>
+    <%= f.text_field :city, class:"form-control", placeholder: "Ciudad" %>
+    <%= f.text_field :country, class:"form-control", placeholder: "País" %>
+    <%= f.text_field :address, class:"form-control", placeholder: "Dirección" %>
+    <%= f.password_field :password, class:"form-control", placeholder: "Contraseña" %>
+    <%= f.password_field :password_confirmation, class:"form-control", placeholder: "Confirma tu contraseña" %>
+    <%= f.submit "Guardar cambios", class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>

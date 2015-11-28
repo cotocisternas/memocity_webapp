@@ -1,0 +1,23 @@
+juan:
+  activated: true
+  activated_at: "<%= Time.zone.now %>"
+  email: juan@memocity.cl
+  mobile_num: 569123456780
+  name: "Juan Ortega"
+  password_digest: "<%= User.digest('password') %>"
+nicolas:
+  activated: true
+  admin: true
+  activated_at: "<%= Time.zone.now %>"
+  email: nico@memocity.cl
+  mobile_num: 569123456789
+  name: "Nico Fuenzalida"
+  password_digest: "<%= User.digest('password') %>"
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "Usuario #{n}" %>
+  mobile_num: <%= "5696425782#{n}" %>
+  email: <%= "user-#{n}@memocity.cl" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>

@@ -1,0 +1,14 @@
+<h1>Memocity</h1>
+<p>Hola <%= @user.name %>.</p>
+
+<p>
+  Bienvenido a Memocity y gracias por elegirnos. Haz click en el siguiente enlace para activar tu cuenta:
+  <%= link_to "Activar cuenta", edit_account_activation_url(@user.activation_token,
+                                                      email: @user.email) %>
+</p>
+Recuerda que nos puedes enviar tus comentarios a <a href="mailto:info@memocity.cl">info@memocity.cl</a>
+<br>
+<p>
+  Saludos!
+</p>
+Equipo de <%= link_to "Memocity", "http://www.memocity.cl" %>
