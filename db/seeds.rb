@@ -33,6 +33,6 @@ users = User.order(:created_at).take(6)
   content = Faker::Lorem.sentence(5)
   users.each do |user|
     user.reminders.create!(content: content,
-                           when_activate: i+3.hours.from_now)
+                           when_activate: 3.hours.from_now)
   end
 end
