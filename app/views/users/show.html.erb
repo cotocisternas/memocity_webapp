@@ -1,9 +1,19 @@
 <% provide(:title, "Memocity") %>
 <div class="row">
-	<aside class="col-md-8">
-		<section class="user_info">
-			<h3><%= @user.name.capitalize %>, te avisamos al número: <%= @user.mobile_num %></h3>
-			<p>¿Algo interesante que recordar?</p>
-		</section>
-	</aside>
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1><%= @user.name.capitalize %>, te avisamos al número:
+        <%= @user.mobile_num %></h1>
+      <p>¿Algo interesante que recordar?</p>
+    </section>
+  </aside>
+  <div class="col-md-4">
+    <% if @user.reminders.any? %>
+    <h3>Recordatorios creados: <%= @user.reminders.count %></h3>
+    <ol class="reminders">
+      <%= render @reminders %>
+    </ol>
+    <%= will_paginate @reminders %>
+    <% end %>
+  </div>
 </div>

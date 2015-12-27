@@ -1,0 +1,30 @@
+orange:
+  content: "I just ate an orange!"
+  when_activate: <%= 15.minutes.from_now %>
+  created_at: <%= 10.minutes.ago %>
+  user: nicolas
+
+tau_manifesto:
+  content: "Check out the @tauday site by @mhartl: http://tauday.com"
+  when_activate: <%= 11.minutes.from_now %>
+  created_at: <%= 3.years.ago %>
+  user: juan
+
+cat_video:
+  content: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
+  when_activate: <%= 12.minutes.from_now %>
+  created_at: <%= 1.years.ago%>
+  user: nicolas
+
+most_recent:
+  content: "Writing a short test"
+  when_activate: <%= 10.minutes.from_now %>
+  created_at: <%= DateTime.now %>
+  user: nicolas
+
+<% 30.times do |n| %>
+reminder_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: juan
+<% end %>

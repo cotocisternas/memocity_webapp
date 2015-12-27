@@ -1,0 +1,10 @@
+<li id="reminder-<%= reminder.id %>">
+<span class="content"><%= reminder.content %></span>
+<p>
+  Activar el <%= reminder.when_activate %>
+
+  <span class="timestamp">
+    Creado el <%= reminder.created_at.strftime("%B %d, %Y") %>
+  </span>
+
+</li>

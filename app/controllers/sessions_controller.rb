@@ -11,12 +11,12 @@ class SessionsController < ApplicationController
         redirect_back_or user
       else
         message = 'Cuenta no activada.'
-        message += 'Revisa tu correo para el enlace de activación'
+        message += 'Revisa tu correo para el enlace de activación.'
         flash.now[:warning] = message
         redirect_to root_url
       end
     else
-      flash.now[:danger] = 'Combinación de correo/clave no es correcta'
+      flash.now[:danger] = 'Combinación de correo/clave no es correcta.'
       render 'new'
     end
   end

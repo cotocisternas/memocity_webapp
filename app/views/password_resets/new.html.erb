@@ -4,7 +4,10 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(:password_reset, url: password_resets_path) do |f| %>
-    <%= f.email_field :email, class: 'form-control', placeholder: 'Correo electrónico' %>
+    <p>
+      Escribe tu correo electronico.
+    </p>
+    <%= f.email_field :email, class: 'form-control' %>
 
     <%= f.submit "Buscar", class: "btn btn-primary" %>
     <% end %>
