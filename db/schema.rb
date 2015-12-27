@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20151128195918) do
 
   create_table "reminders", force: :cascade do |t|
-    t.text     "content", null: false
-    t.datetime "when_activate", null: false
+    t.text     "content"
+    t.datetime "when_activate"
     t.integer  "user_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false

@@ -1,22 +1,19 @@
 @import "bootstrap";
-@import url(https://fonts.googleapis.com/css?family=Oxygen);
+@import url(https://fonts.googleapis.com/css?family=Hind+Vadodara);
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
-
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:800);
 /* mixins, variables, etc. */
-
-@gray-base:              #000;
-@gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              #7b8a8b;   // #333
-@gray:                   #95a5a6; // #555
-@gray-light:             #b4bcc2;   // #999
-@gray-lighter:           #ecf0f1; // #eee
-
-@brand-primary:         #2C3E50;
-@brand-success:         #18BC9C;
-@brand-info:            #3498DB;
-@brand-warning:         #F39C12;
-@brand-danger:          #E74C3C;
-
+@gray-base: #000;
+@gray-darker: lighten(@gray-base, 13.5%); // #222
+@gray-dark: #7b8a8b; // #333
+@gray: #95a5a6; // #555
+@gray-light: #b4bcc2; // #999
+@gray-lighter: #ecf0f1; // #eee
+@brand-primary: #2C3E50;
+@brand-success: #18BC9C;
+@brand-info: #3498DB;
+@brand-warning: #F39C12;
+@brand-danger: #E74C3C;
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -24,28 +21,22 @@
 }
 
 /* universal */
-
 html {
   overflow-y: scroll;
-
 }
-
 .jumbotron {
   background-color: #50a0ee;
 }
-
 body {
+  font-family: 'Hind Vadodara', sans-serif;
   padding-top: 60px;
 }
-
 section {
   overflow: auto;
 }
-
 textarea {
   resize: vertical;
 }
-
 .center {
   text-align: center;
   h1 {
@@ -54,18 +45,20 @@ textarea {
 }
 
 /* typography */
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1;
 }
-
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
 }
-
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
@@ -74,19 +67,22 @@ h2 {
   font-weight: normal;
   color: $gray-darker;
 }
-
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+div {
+  .menu {
+font-family: 'Alegreya Sans', sans-serif;
+font-size: 16px;
 
+  }
+}
 
 /* header */
-
 #logo {
   font-family: 'Pacifico', cursive;
   float: left;
-
   margin-right: 10px;
   font-size: 1.7em;
   color: white;
@@ -103,7 +99,6 @@ p {
 }
 
 /* footer */
-
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -129,7 +124,6 @@ footer {
 }
 
 /* miscellaneous */
-
 .debug_dump {
   clear: both;
   float: left;
@@ -139,10 +133,8 @@ footer {
 }
 
 /* sidebar */
-
 aside {
   section {
-    font-family: 'Oxygen', sans-serif;
     padding: 10px 0;
     border-top: 1px solid $gray-lighter;
     &:first-child {
@@ -162,7 +154,6 @@ aside {
     }
   }
 }
-
 .stats {
   overflow: auto;
   a {
@@ -176,52 +167,47 @@ aside {
     }
     &:hover {
       text-decoration: none;
-      color: $brand-info;    }
+      color: $brand-info;
+    }
   }
   strong {
     display: block;
   }
 }
 
-
 /* forms */
-
-input, textarea, select, .uneditable-input {
+input,
+textarea,
+select,
+.uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   height: auto;
   margin-bottom: 15px;
   @include box_sizing;
 }
-
 #error_explanation {
   color: #f00;
   ul {
     list-style: none;
-    margin: 0 0 18px 0;
+    margin: 0 0 18px;
   }
 }
 
 /* reminders */
-
 .reminders {
-  font-family: 'Oxygen', sans-serif;
-
-
   list-style: none;
   padding: 0;
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
-
   .content {
     display: block;
     font-size: 16px;
     font-weight: bold;
     margin-left: 60px;
   }
-
   .when_activate {
     color: $brand-info;
     display: block;
@@ -234,9 +220,7 @@ input, textarea, select, .uneditable-input {
     display: block;
     margin-left: 60px;
   }
-
 }
-
 aside {
   textarea {
     height: 100px;
@@ -244,10 +228,7 @@ aside {
   }
 }
 
-
-
 /* users index */
-
 .users {
   list-style: none;
   margin: 0;

@@ -6,12 +6,11 @@ class Reminder < ActiveRecord::Base
   validates :content, presence: true, length: { maximum: 140 }
   validate :eval_when_activate
 
-
-
-
   def eval_when_activate
-    if when_activate.nil? or when_activate <= DateTime.now
-      errors.add :base, 'Cuando activar no puede quedar en blanco o la fecha es menor a la actual.'
+    if when_activate.nil?
+      errors.add :base, 'Cuando activar no puede quedar en blanco.'
+    elsif when_activate <= DateTime.now
+      errors.add :base, 'Fecha/Hora debe ser mayor a la actual.'
     end
   end
 end
