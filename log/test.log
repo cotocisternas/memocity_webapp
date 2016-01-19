@@ -16717,3 +16717,43 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.2ms)
   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
   [1m[35m (0.0ms)[0m  rollback transaction
+Started GET "/" for ::1 at 2015-12-28 15:48:45 -0300
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (132.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 3865ms (Views: 3851.6ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.css" for ::1 at 2015-12-28 15:48:49 -0300
+Started GET "/assets/application.js" for ::1 at 2015-12-28 15:48:49 -0300
+Started GET "/assets/logo.png" for ::1 at 2015-12-28 15:48:49 -0300
+Started GET "/dsa" for ::1 at 2015-12-28 15:48:55 -0300
+Started GET "/e" for ::1 at 2015-12-28 15:49:01 -0300
+Started GET "/login" for ::1 at 2015-12-28 15:49:05 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+Started POST "/login" for ::1 at 2015-12-28 15:49:10 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"admin@memocity.cl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar sesión"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.7ms)
+Started POST "/login" for ::1 at 2015-12-28 15:49:13 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"admin@memocity.cl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar sesión"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+Started GET "/" for ::1 at 2015-12-28 15:49:26 -0300
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (129.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 186ms (Views: 174.1ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.css" for ::1 at 2015-12-28 15:49:27 -0300
+Started GET "/assets/application.js" for ::1 at 2015-12-28 15:49:27 -0300
+Started GET "/assets/logo.png" for ::1 at 2015-12-28 15:49:27 -0300
+Started GET "/signup" for ::1 at 2015-12-28 15:49:28 -0300
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.2ms)
+Started GET "/signup" for ::1 at 2015-12-28 15:49:28 -0300
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)

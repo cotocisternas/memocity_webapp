@@ -2,15 +2,15 @@
 <span class="content"><%= reminder.content %></span>
 <p>
   <span class="when_activate">
-    Llamar el día
+    Llamar a las <%= reminder.when_activate.strftime("%l:%M %p") %>
+el día
     <%= reminder.when_activate.strftime("%d-%m-%Y") %>
-    a las <%= reminder.when_activate.strftime("%H:%m") %>
   </span>
+
   <span class="timestamp">
-    Creado el
+    | Creado el
     <%= reminder.created_at.strftime("%d-%m-%Y") %>
   </span>
 </p>
-
 
 </li>
