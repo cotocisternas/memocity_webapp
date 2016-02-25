@@ -1,11 +1,9 @@
 *.rbc
 capybara-*.html
 .rspec
-<<<<<<< HEAD
 /log/*
-=======
+
 /log
->>>>>>> recordatorio-usuario
 /tmp
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -17,13 +15,10 @@ rerun.txt
 pickle-email-*.html
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
-<<<<<<< HEAD
 config/initializers/secret_token.rb
 config/secrets.yml
-=======
 #config/initializers/secret_token.rb
 #config/secrets.yml
->>>>>>> recordatorio-usuario
 
 ## Environment normalization:
 /.bundle
@@ -46,5 +41,3 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
-=======
->>>>>>> recordatorio-usuario
