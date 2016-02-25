@@ -61260,3 +61260,1804 @@ Migrating to CreateReminders (20151128195918)
   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."created_at" ASC LIMIT 6[0m
   [1m[35m (0.0ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/" for ::1 at 2016-02-25 00:35:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (2.8ms)
+  Rendered shared/_error_messages.html.erb (2.9ms)
+  Rendered shared/_reminder_form.html.erb (16.8ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)
+  Rendered shared/_feed.html (1.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (32.3ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 2328ms (Views: 2256.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 00:35:31 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.8ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (3.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  Rendered shared/_feed.html (0.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 130ms (Views: 126.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 00:35:31 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.8ms)
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered shared/_reminder_form.html.erb (4.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)
+  Rendered shared/_feed.html (1.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 131ms (Views: 128.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reminders" for ::1 at 2016-02-25 00:36:03 -0300
+Processing by RemindersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nHLrNx0DFeM1SZxLdPWvD4H+5ewEQNW7RBw1k/OeNfvE0/fEJs34XYm/4pk9FK11v1vtDqheLOUii/xlkyQ6Tw==", "reminder"=>{"content"=>"Llamar a usuarios", "when_activate"=>"2016-02-26T03:00"}, "commit"=>"Crear el recordatorio"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.8ms)
+  Rendered shared/_error_messages.html.erb (0.2ms)
+  Rendered shared/_reminder_form.html.erb (2.7ms)
+  Rendered shared/_feed.html (0.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 134ms (Views: 127.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/reminders" for ::1 at 2016-02-25 00:36:17 -0300
+Processing by RemindersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VC0AJw7SUv2BpGCiED38cc1s4CPr49WqszPDuE0k9QsMjBzUNRy/Qz1SHnBZ3P4L88nowUf9LPTVpApOLZ76vw==", "reminder"=>{"content"=>"Llamar a usuarios", "when_activate"=>"2016-02-26T12:00"}, "commit"=>"Crear el recordatorio"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.4ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (2.5ms)
+  Rendered shared/_feed.html (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 131ms (Views: 125.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/reminders" for ::1 at 2016-02-25 00:36:21 -0300
+Processing by RemindersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ldrpyUhTlClY3R3EGxuO/LKzhruLeCsqC6K1yNZ+CWDNe/U6c515l+QrYxZS+oyGjBaOWSdm0nRtNXw+tsQG1A==", "reminder"=>{"content"=>"Llamar a usuarios", "when_activate"=>"2016-02-26T00:00"}, "commit"=>"Crear el recordatorio"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.2ms)
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered shared/_reminder_form.html.erb (3.4ms)
+  Rendered shared/_feed.html (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 128ms (Views: 123.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/reminders" for ::1 at 2016-02-25 00:36:28 -0300
+Processing by RemindersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a+57f4wUo2pTzLd/HScpKBt6dtp7fWYWFRKZmo5U18MzT2eMt9pO1O86ya1UxitSJd9+ONdjn0hzhVBs7u7Ydw==", "reminder"=>{"content"=>"Llamar a usuarios", "when_activate"=>"2016-02-24T00:00"}, "commit"=>"Crear el recordatorio"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "reminders" ("content", "when_activate", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Llamar a usuarios"], ["when_activate", "2016-02-24 00:00:00.000000"], ["user_id", 1], ["created_at", "2016-02-25 03:36:28.248971"], ["updated_at", "2016-02-25 03:36:28.248971"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 00:36:28 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.0ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (3.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.2ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  Rendered reminders/_reminder.html.erb (0.9ms)
+  Rendered shared/_feed.html (5.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 115ms (Views: 111.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 00:36:37 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (0.9ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  Rendered reminders/_reminder.html.erb (0.7ms)
+  Rendered shared/_feed.html (3.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 105ms (Views: 102.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-02-25 00:36:40 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 103ms (Views: 100.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2016-02-25 00:36:42 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReminder Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  [1m[36mReminder Load (0.2ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m  [["user_id", 1]]
+  Rendered reminders/_reminder.html.erb (0.3ms)
+  Rendered users/show.html.erb within layouts/application (16.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 120ms (Views: 116.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 00:36:44 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.0ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.5ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  Rendered reminders/_reminder.html.erb (0.2ms)
+  Rendered shared/_feed.html (3.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 127ms (Views: 123.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 00:37:58 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.8ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.5ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  Rendered reminders/_reminder.html.erb (0.3ms)
+  Rendered shared/_feed.html (3.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 157ms (Views: 121.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/password_resets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/custom.self-d67f2ed09481dde46d7db261f109b76f3e424d45f6b7004852a1d194cb648bd4.css?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/reminders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/password_resets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/reminders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 00:37:59 -0300
+
+
+Started POST "/reminders" for ::1 at 2016-02-25 00:38:17 -0300
+Processing by RemindersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eCcw1rYP+N3eU+X4DSQBZMXGI9mqYEYjC/arvcZfjmlQYAwYRbSXcuPMUWp1ZJ/rbIQbcq3eEbquBNYl6NxjQ==", "reminder"=>{"content"=>"dasdsadsa", "when_activate"=>"2016-02-26T01:00"}, "commit"=>"Crear el recordatorio"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "reminders" ("content", "when_activate", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "dasdsadsa"], ["when_activate", "2016-02-26 01:00:00.000000"], ["user_id", 1], ["created_at", "2016-02-25 03:38:17.943997"], ["updated_at", "2016-02-25 03:38:17.943997"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 00:38:17 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (2.0ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  Rendered reminders/_reminder.html.erb (0.5ms)
+  Rendered shared/_feed.html (3.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 108.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/reminders" for ::1 at 2016-02-25 00:38:40 -0300
+Processing by RemindersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n6rtkC6q7A2m03ltk/CsJHwb8SIYeWIBUZxoxoG7W2THC/FjFWQBsxolB7/aEa5eQr75wLRnm183C6Ew4QFU0A==", "reminder"=>{"content"=>"dsadsadsa", "when_activate"=>"2015-12-31T00:00"}, "commit"=>"Crear el recordatorio"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.4ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (2.5ms)
+  Rendered shared/_feed.html (0.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 105ms (Views: 99.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/reminders" for ::1 at 2016-02-25 00:40:11 -0300
+Processing by RemindersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dY/EbwevMEaXLVWI5RiqWuKdsIJzSVHgJhXX0SE3sAwtLticPGHd+CvbK1qs+agg3Di4YN9XqL5Agh4nQY2/uA==", "reminder"=>{"content"=>"dsadsadsa", "when_activate"=>"2016-12-31T00:00"}, "commit"=>"Crear el recordatorio"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reminders" ("content", "when_activate", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "dsadsadsa"], ["when_activate", "2016-12-31 00:00:00.000000"], ["user_id", 1], ["created_at", "2016-02-25 03:40:11.027113"], ["updated_at", "2016-02-25 03:40:11.027113"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 00:40:11 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.8ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  Rendered reminders/_reminder.html.erb (0.5ms)
+  Rendered shared/_feed.html (3.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 98.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 00:40:41 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.3ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (2.9ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  Rendered reminders/_reminder.html.erb (0.6ms)
+  Rendered shared/_feed.html (3.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 117ms (Views: 114.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/help" for ::1 at 2016-02-25 00:40:43 -0300
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 116ms (Views: 115.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2016-02-25 00:40:44 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 102ms (Views: 101.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2016-02-25 00:40:57 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReminder Exists (0.2ms)[0m  SELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 1]]
+  Rendered reminders/_reminder.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 106ms (Views: 103.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/4" for ::1 at 2016-02-25 00:41:19 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mReminder Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 110ms (Views: 107.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/5" for ::1 at 2016-02-25 00:41:25 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mReminder Exists (0.1ms)[0m  SELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 101.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-02-25 00:41:32 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/edit.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 93ms (Views: 91.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2016-02-25 00:41:34 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReminder Exists (0.1ms)[0m  SELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mReminder Load (0.2ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 1]]
+  Rendered reminders/_reminder.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 90.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2016-02-25 00:42:12 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 122ms (Views: 120.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2016-02-25 00:42:15 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReminder Exists (0.1ms)[0m  SELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0  [["user_id", 1]]
+  Rendered reminders/_reminder.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 109.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 17:36:55 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (2.9ms)
+  Rendered shared/_error_messages.html.erb (2.6ms)
+  Rendered shared/_reminder_form.html.erb (16.9ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)
+  [1m[36mReminder Load (0.2ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  Rendered reminders/_reminder.html.erb (1.2ms)
+  Rendered shared/_feed.html (5.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (36.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 477ms (Views: 407.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/custom.self-d67f2ed09481dde46d7db261f109b76f3e424d45f6b7004852a1d194cb648bd4.css?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/password_resets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/reminders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/password_resets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/reminders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 17:36:56 -0300
+
+
+Started GET "/" for ::1 at 2016-02-25 17:39:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (3.1ms)
+  Rendered shared/_error_messages.html.erb (2.6ms)
+  Rendered shared/_reminder_form.html.erb (15.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)
+  [1m[36mReminder Load (0.2ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  Rendered reminders/_reminder.html.erb (1.1ms)
+  Rendered shared/_feed.html (6.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (35.5ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 491ms (Views: 422.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for ::1 at 2016-02-25 17:42:36 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReminder Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  [1m[36mReminder Load (0.1ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m  [["user_id", 1]]
+  Rendered reminders/_reminder.html.erb (1.2ms)
+  Rendered users/show.html.erb within layouts/application (15.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 177ms (Views: 173.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-02-25 17:42:45 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/edit.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 111ms (Views: 108.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2016-02-25 17:42:48 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l6IHTERe8W95w3tJSS7nyqfzN7MqasvbP6Px8Ti/+ljPAxu/f5Ac0cU1BZsAz+WwmVY/UYZ0MoVZNDgHWAX17A==", "user"=>{"name"=>"Admin user", "last_name"=>"", "email"=>"admin@memocity.cl", "mobile_num"=>"56964257821", "city"=>"", "country"=>"", "address"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Guardar cambios", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+Unpermitted parameters: last_name, city, country, address
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('admin@memocity.cl') AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."mobile_num" = '56964257821' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "mobile_num" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["mobile_num", "56964257821"], ["updated_at", "2016-02-25 20:42:48.955526"], ["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 15ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1" for ::1 at 2016-02-25 17:42:48 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReminder Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  [1m[36mReminder Load (0.1ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m  [["user_id", 1]]
+  Rendered reminders/_reminder.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (7.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 117ms (Views: 114.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 17:43:15 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (2.1ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (3.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.5ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  Rendered reminders/_reminder.html.erb (0.6ms)
+  Rendered shared/_feed.html (6.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 132ms (Views: 129.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2016-02-25 17:43:28 -0300
+Processing by UsersController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" LIMIT 30 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 117ms (Views: 115.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/2" for ::1 at 2016-02-25 17:43:29 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mReminder Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 101ms (Views: 97.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/4" for ::1 at 2016-02-25 17:43:32 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mReminder Exists (0.1ms)[0m  SELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 113ms (Views: 110.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:19:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (3.6ms)
+  Rendered shared/_error_messages.html.erb (3.5ms)
+  Rendered shared/_reminder_form.html.erb (20.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)
+  [1m[36mReminder Load (0.2ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  Rendered reminders/_reminder.html.erb (29.2ms)
+  Rendered shared/_feed.html (34.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (70.5ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (undefined local variable or method `micropost' for #<#<Class:0x007fd00b764ae8>:0x007fd00b75df68>):
+     9:     <span class="timestamp">
+    10:       | Creado el
+    11:       <%= reminder.created_at.strftime("%d-%m-%Y") %>
+    12:       <% if current_user?(micropost.user) %>
+    13:         <%= link_to "delete", reminder, method: :delete, data: { confirm: "¿Estas seguro?"} %>
+    14:       <% end %>
+    15:     </span>
+  app/views/reminders/_reminder.html.erb:12:in `_app_views_reminders__reminder_html_erb___1725585764863450450_70265749609660'
+  app/views/shared/_feed.html:3:in `_app_views_shared__feed_html__1258784399614817311_70265757962540'
+  app/views/static_pages/home.html.erb:16:in `_app_views_static_pages_home_html_erb__2572759090522545336_70265750645460'
+
+
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.4ms)
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (71.4ms)
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Nico/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (163.8ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:19:40 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.7ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)
+  [1m[36mReminder Load (0.1ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered reminders/_reminder.html.erb (4.4ms)
+  Rendered shared/_feed.html (7.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 479ms (Views: 475.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/password_resets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/custom.self-d67f2ed09481dde46d7db261f109b76f3e424d45f6b7004852a1d194cb648bd4.css?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/reminders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/password_resets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/reminders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 18:19:41 -0300
+
+
+Started GET "/" for ::1 at 2016-02-25 18:19:59 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.7ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (2.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.2ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reminders/_reminder.html.erb (4.9ms)
+  Rendered shared/_feed.html (8.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (17.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 133ms (Views: 128.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/password_resets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:19:59 -0300
+
+
+Started GET "/assets/custom.self-d67f2ed09481dde46d7db261f109b76f3e424d45f6b7004852a1d194cb648bd4.css?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/reminders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/password_resets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/reminders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 18:20:00 -0300
+
+
+Started GET "/" for ::1 at 2016-02-25 18:20:21 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.9ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)
+  [1m[36mReminder Load (0.1ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered reminders/_reminder.html.erb (6.9ms)
+  Rendered shared/_feed.html (10.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (20.2ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 148ms (Views: 144.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/custom.self-d67f2ed09481dde46d7db261f109b76f3e424d45f6b7004852a1d194cb648bd4.css?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/password_resets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/reminders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/password_resets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/reminders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 18:20:21 -0300
+
+
+Started DELETE "/reminders/2" for ::1 at 2016-02-25 18:20:25 -0300
+Processing by RemindersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PvSofJhVuy5MrYwP2yWnkijiP2V0CyGAtQC5U3V3/dJmVbSPo5tWkPBb8t2SxKXoFkc3h9gV2N7Tl3ClFc3yZg==", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReminder Load (0.2ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ? AND "reminders"."id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 1  [["user_id", 1], ["id", 2]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:20:25 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.2ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (2.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reminders/_reminder.html.erb (3.2ms)
+  Rendered shared/_feed.html (6.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 127ms (Views: 123.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/reminders/2" for ::1 at 2016-02-25 18:20:28 -0300
+Processing by RemindersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"67HX7xbruqcgbSAhiQGPdBb9rQknZs6onqjtTyIW8DGzEMscLSVXGZybXvPA4I0OKFil64t4N/b4PyS5Qqz/hQ==", "id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReminder Load (0.1ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ? AND "reminders"."id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 1[0m  [["user_id", 1], ["id", 2]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:20:28 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.2ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)
+  [1m[36mReminder Load (0.2ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered reminders/_reminder.html.erb (4.6ms)
+  Rendered shared/_feed.html (7.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 117ms (Views: 113.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:20:30 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.8ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (2.9ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reminders/_reminder.html.erb (3.6ms)
+  Rendered shared/_feed.html (6.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 127ms (Views: 124.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/custom.self-d67f2ed09481dde46d7db261f109b76f3e424d45f6b7004852a1d194cb648bd4.css?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/reminders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/password_resets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/password_resets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/reminders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 18:20:30 -0300
+
+
+Started GET "/" for ::1 at 2016-02-25 18:21:09 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (2.6ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (3.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)
+  [1m[36mReminder Load (0.2ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered reminders/_reminder.html.erb (4.8ms)
+  Rendered shared/_feed.html (8.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 155ms (Views: 125.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/custom.self-d67f2ed09481dde46d7db261f109b76f3e424d45f6b7004852a1d194cb648bd4.css?body=1" for ::1 at 2016-02-25 18:21:09 -0300
+
+
+Started GET "/assets/password_resets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:21:09 -0300
+
+
+Started GET "/assets/reminders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:21:09 -0300
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:21:09 -0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:21:09 -0300
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:21:09 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-02-25 18:21:09 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 18:21:09 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 18:21:09 -0300
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-02-25 18:21:10 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 18:21:10 -0300
+
+
+Started GET "/assets/password_resets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:21:10 -0300
+
+
+Started GET "/assets/reminders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:21:10 -0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:21:10 -0300
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:21:10 -0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:21:10 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 18:21:10 -0300
+
+
+Started DELETE "/reminders/3" for ::1 at 2016-02-25 18:21:12 -0300
+Processing by RemindersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Iw2P9JjmcGPDNHxepPx/jwkdmW2F/T9ONaJGfaB47uh7rJMHoyid3X/CAoztHX31N7iRjynjxhBTNY+LwMLhXA==", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReminder Load (0.2ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ? AND "reminders"."id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 1  [["user_id", 1], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "reminders" WHERE "reminders"."id" = ?  [["id", 3]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:21:12 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.5ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)
+  [1m[36mReminder Load (0.1ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reminders/_reminder.html.erb (2.3ms)
+  Rendered shared/_feed.html (5.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 122ms (Views: 119.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/reminders/2" for ::1 at 2016-02-25 18:21:16 -0300
+Processing by RemindersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wAgJYbzIktfUtvuIlWt5GLjk03iJVQy//UKNC3YPvvSYqRWShwZ/aWhAhVrcintihkHbmiVL9eGb1UT9FrWxQA==", "id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReminder Load (0.1ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ? AND "reminders"."id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 1[0m  [["user_id", 1], ["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "reminders" WHERE "reminders"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:21:16 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.1ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reminders/_reminder.html.erb (3.0ms)
+  Rendered shared/_feed.html (6.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 115ms (Views: 112.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/reminders/1" for ::1 at 2016-02-25 18:21:18 -0300
+Processing by RemindersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C1RMvo23hHeKXhLj51Z10z3eTNY3yQIX33/65TYoj3VT9VBNtnlpyTaobDGut3epA3tENJvX+0m56DMTVpKAwQ==", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReminder Load (0.2ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ? AND "reminders"."id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "reminders" WHERE "reminders"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:21:18 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.1ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  Rendered shared/_feed.html (0.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 124ms (Views: 121.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:21:22 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.3ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_reminder_form.html.erb (2.6ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)
+  Rendered shared/_feed.html (0.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 110ms (Views: 107.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/custom.self-d67f2ed09481dde46d7db261f109b76f3e424d45f6b7004852a1d194cb648bd4.css?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/reminders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/password_resets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/password_resets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/reminders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-25 18:21:22 -0300
+
+
+Started POST "/reminders" for ::1 at 2016-02-25 18:21:36 -0300
+Processing by RemindersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lLKS+Ftqf7oTbT95WxF4l+5UaJwYYDBhZmObcg8NcVbME44LYKSSBK+bQasS8Hrt0PFgfrR+yT8A9FKEb7d+4g==", "reminder"=>{"content"=>"bla bla bla", "when_activate"=>"2016-01-31T01:00"}, "commit"=>"Crear el recordatorio"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.8ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (2.3ms)
+  Rendered shared/_feed.html (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 118ms (Views: 112.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/reminders" for ::1 at 2016-02-25 18:21:43 -0300
+Processing by RemindersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"anO3ZgHpQbaT2VjxYIIQfhSFRB0lHktTVD5O0bBUUKoy0quVOiesCC8vJiMpYxIEKiBM/4kAsg0yqYcn0O5fHg==", "reminder"=>{"content"=>"bla bla bla", "when_activate"=>"2016-12-31T01:00"}, "commit"=>"Crear el recordatorio"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "reminders" ("content", "when_activate", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "bla bla bla"], ["when_activate", "2016-12-31 01:00:00.000000"], ["user_id", 1], ["created_at", "2016-02-25 21:21:43.818950"], ["updated_at", "2016-02-25 21:21:43.818950"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:21:43 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.3ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE (user_id = 1)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reminders/_reminder.html.erb (1.6ms)
+  Rendered shared/_feed.html (4.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 118ms (Views: 115.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/reminders/4" for ::1 at 2016-02-25 18:21:47 -0300
+Processing by RemindersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fhqDG4Sz2Gu8Qxcc/pPuEZD3FTcl0U9afhlCK07eH5Amu5/ov3011QC1ac63cuxrrlId1YnPtgQYjovdLmQQJA==", "id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReminder Load (0.2ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ? AND "reminders"."id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 1[0m  [["user_id", 1], ["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "reminders" WHERE "reminders"."id" = ?[0m  [["id", 4]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:21:47 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.1ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (2.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  Rendered shared/_feed.html (0.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 120ms (Views: 116.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2016-02-25 18:21:54 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/edit.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 113ms (Views: 110.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:21:56 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 1]]
+  Rendered shared/_user_info.html.erb (1.8ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (3.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 1)[0m
+  Rendered shared/_feed.html (1.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 129ms (Views: 125.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-02-25 18:21:57 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IzEsdF5dYnNb1TEoQY6dDm5uAmZfXI332/IZcW/TSYp7kDCHZZOPzecjT/oIb590UMsKhPNCdKm9ZdCHD2lGPg=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:21:57 -0300
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 112ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-02-25 18:21:59 -0300
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 114ms (Views: 113.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-02-25 18:22:34 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SROVzbvE7Dw94DVEMsDg/La+qrpdOoqo4nYi/jFpm5MRsok+gAoBgoEWS5Z7IeKGiBuiWPEkc/aE4esIUdOUJw==", "user"=>{"name"=>"valeria", "last_name"=>"villegas", "email"=>"valeria.villegaslgs@gmail.com", "mobile_num"=>"56952547670", "country"=>"Chile", "city"=>"Santiago", "address"=>"LOS GUANACOS", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrar en Memocity"}
+Unpermitted parameters: last_name, country, city, address
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('valeria.villegaslgs@gmail.com') LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."mobile_num" = '56952547670' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "mobile_num", "password_digest", "created_at", "updated_at", "activation_digest") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "valeria"], ["email", "valeria.villegaslgs@gmail.com"], ["mobile_num", "56952547670"], ["password_digest", "$2a$10$j/gban5X2UcwR9OYUuWYUOE48d.f6GFgpBGNwRwVWXbrlOaCXfRQe"], ["created_at", "2016-02-25 21:22:34.680522"], ["updated_at", "2016-02-25 21:22:34.680522"], ["activation_digest", "$2a$10$NvbKQLYJqpgUf27p3mBdbu3slr7rDv0pLNGCVMOUYBeLLkK4L4FCC"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (2.9ms)
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.7ms)
+
+UserMailer#account_activation: processed outbound mail in 272.9ms
+
+Sent mail to valeria.villegaslgs@gmail.com (12.1ms)
+Date: Thu, 25 Feb 2016 18:22:35 -0300
+From: noreply@memocity.cl
+To: valeria.villegaslgs@gmail.com
+Message-ID: <56cf709b1fe0f_32333fe8084917ec773a4@NFOmac.local.mail>
+Subject: =?UTF-8?Q?Activaci=C3=B3n_de_cuenta?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_56cf709b1d7b0_32333fe8084917ec77268";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_56cf709b1d7b0_32333fe8084917ec77268
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hola valeria.
+Bienvenido a Memocity y gracias por elegirnos.
+Haz click en el siguiente enlace para activar tu cuenta: http://localhost:3000/account_activations/BXTIaNMny1-xh7sfwzFIKQ/edit?email=valeria.villegaslgs%40gmail.com
+
+Recuerda que nos puedes enviar tus comentarios a info@memocity.cl
+
+Saludos!
+
+Equipo de Memocity
+
+
+----==_mimepart_56cf709b1d7b0_32333fe8084917ec77268
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <h1>Memocity</h1>
+<p>Hola valeria.</p>
+
+<p>
+  Bienvenido a Memocity y gracias por elegirnos. Haz click en el siguiente enlace para activar tu cuenta:
+  <a href="http://localhost:3000/account_activations/BXTIaNMny1-xh7sfwzFIKQ/edit?email=valeria.villegaslgs%40gmail.com">Activar cuenta</a>
+</p>
+Recuerda que nos puedes enviar tus comentarios a <a href="mailto:info@memocity.cl">info@memocity.cl</a>
+<br>
+<p>
+  Saludos!
+</p>
+Equipo de <a href="http://www.memocity.cl">Memocity</a>
+
+  </body>
+</html>
+
+----==_mimepart_56cf709b1d7b0_32333fe8084917ec77268--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 551ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:22:35 -0300
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 100ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account_activations/BXTIaNMny1-xh7sfwzFIKQ/edit?email=valeria.villegaslgs%40gmail.com" for ::1 at 2016-02-25 18:22:46 -0300
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"valeria.villegaslgs@gmail.com", "id"=>"BXTIaNMny1-xh7sfwzFIKQ"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "valeria.villegaslgs@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "activated" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["activated", "t"], ["updated_at", "2016-02-25 21:22:46.379760"], ["id", 12]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "activated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["activated_at", "2016-02-25 21:22:46.383069"], ["updated_at", "2016-02-25 21:22:46.383830"], ["id", 12]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 85ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/12" for ::1 at 2016-02-25 18:22:46 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mReminder Exists (0.2ms)[0m  SELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 109ms (Views: 105.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2016-02-25 18:22:55 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 119ms (Views: 117.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:22:57 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 12]]
+  Rendered shared/_user_info.html.erb (1.2ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 12)[0m
+  Rendered shared/_feed.html (0.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 131ms (Views: 128.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/12/edit" for ::1 at 2016-02-25 18:23:01 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 98.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:23:03 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 12]]
+  Rendered shared/_user_info.html.erb (1.5ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 12)[0m
+  Rendered shared/_feed.html (0.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 111ms (Views: 107.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/12" for ::1 at 2016-02-25 18:23:05 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mReminder Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1[0m  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 99ms (Views: 96.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:23:07 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 12]]
+  Rendered shared/_user_info.html.erb (1.2ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 12)[0m
+  Rendered shared/_feed.html (0.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 105ms (Views: 102.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reminders" for ::1 at 2016-02-25 18:23:16 -0300
+Processing by RemindersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+ci9C1SKR4Kzh5okrU38oPgoKA01Lpw2HXIJ5lPi8FWhaaH4b0SqPA9x5PbkrP7axo0g75kwZWh75cAQM1j/4Q==", "reminder"=>{"content"=>"la la la", "when_activate"=>"2016-12-31T12:59"}, "commit"=>"Crear el recordatorio"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reminders" ("content", "when_activate", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "la la la"], ["when_activate", "2016-12-31 12:59:00.000000"], ["user_id", 12], ["created_at", "2016-02-25 21:23:16.044559"], ["updated_at", "2016-02-25 21:23:16.044559"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:23:16 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered shared/_user_info.html.erb (1.1ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (2.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 12)
+  [1m[36mReminder Load (0.1ms)[0m  [1mSELECT  "reminders".* FROM "reminders" WHERE (user_id = 12)  ORDER BY "reminders"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered reminders/_reminder.html.erb (1.5ms)
+  Rendered shared/_feed.html (5.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 115ms (Views: 112.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/reminders/5" for ::1 at 2016-02-25 18:23:27 -0300
+Processing by RemindersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0h4nFap1F1z/j29Ze3ScyvIFC0KvoBj5M9Qr7HTCOH2Kvzvmkbv64kN5EYsylZ6wzKADoAO+4adVQ+IaFHg3yQ==", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mReminder Load (0.1ms)[0m  SELECT  "reminders".* FROM "reminders" WHERE "reminders"."user_id" = ? AND "reminders"."id" = ?  ORDER BY "reminders"."created_at" DESC LIMIT 1  [["user_id", 12], ["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "reminders" WHERE "reminders"."id" = ?  [["id", 5]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:23:27 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered shared/_user_info.html.erb (1.1ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE (user_id = 12)
+  Rendered shared/_feed.html (0.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 107ms (Views: 104.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2016-02-25 18:23:48 -0300
+Processing by UsersController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" LIMIT 30 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 131ms (Views: 129.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/help" for ::1 at 2016-02-25 18:23:58 -0300
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 123ms (Views: 122.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:24:00 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 12]]
+  Rendered shared/_user_info.html.erb (1.5ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (3.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 12)[0m
+  Rendered shared/_feed.html (0.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 133ms (Views: 129.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/help" for ::1 at 2016-02-25 18:24:02 -0300
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 113ms (Views: 111.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:24:04 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 12]]
+  Rendered shared/_user_info.html.erb (1.4ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered shared/_reminder_form.html.erb (3.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 12)[0m
+  Rendered shared/_feed.html (0.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 125ms (Views: 121.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-02-25 18:24:09 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Mv/vtT6uQIXTaRD+m8rY0361H11fV7xb/c2++kaxqCVqXvNGBWCtO2+fbizSK9qpQBAXv/NJRQWbWncMJgunkQ=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:24:09 -0300
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 105ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-02-25 18:25:28 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 111ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-02-25 18:25:31 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eSNfPbNZfI/coLvahHNG1tnzOJPUAKz4E9ahoXLx+d8hgkPOiJeRMWBWxQjNkkSs51YwcXgeVaZ1QWhXEkv2aw==", "session"=>{"email"=>"nico@memocity.cl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar sesión"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "nico@memocity.cl"]]
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 129ms (Views: 126.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2016-02-25 18:25:37 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TA2bhZF5pKbpXBmwUO8n/CXgoNOo//62CMwTNfUo+ZMUrId2qrdJGFWqZ2IZDiWGG0WoMQThB+huW9rDlZL2Jw==", "session"=>{"email"=>"nico@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar sesión"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "nico@example.com"]]
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 105ms (Views: 104.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2016-02-25 18:25:41 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OPkiAULFBqGDJje81dJhqPME4iWQWBAqASTGnCm9ZuhgWD7yeQvrHz/QSW6cM2PSzaHqxzxG6XRnsw9qSQdpXA==", "session"=>{"email"=>"nico@memocity.cl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar sesión"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "nico@memocity.cl"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 104ms (Views: 102.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2016-02-25 18:25:48 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fWCgl3mcozlQXZFHLAfX38jO/qMmNjs1ZP87x1VQXB8lwbxkQlJOh+yr75Vl5tWl9mv2QYoowmsCaPIxNepTqw==", "session"=>{"email"=>"valeria.villegaslgs@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar sesión"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "valeria.villegaslgs@gmail.com"]]
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 180ms (Views: 104.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2016-02-25 18:26:56 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GgHiL92uxEBBoC2ymJ1sIJr7LA4j9+zDUlX8PQRMC+1CoP7c5mAp/v1WU2DRfG5apF4k7I/pFZ00wjXLZPYEWQ==", "session"=>{"email"=>"valeria.villegaslgs@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar sesión"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "valeria.villegaslgs@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 82ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/12" for ::1 at 2016-02-25 18:26:56 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mReminder Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "reminders" WHERE "reminders"."user_id" = ? LIMIT 1[0m  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 92.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-02-25 18:27:06 -0300
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reminders" WHERE "reminders"."user_id" = ?  [["user_id", 12]]
+  Rendered shared/_user_info.html.erb (1.1ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered shared/_reminder_form.html.erb (2.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reminders" WHERE (user_id = 12)[0m
+  Rendered shared/_feed.html (0.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 120ms (Views: 117.1ms | ActiveRecord: 0.3ms)
