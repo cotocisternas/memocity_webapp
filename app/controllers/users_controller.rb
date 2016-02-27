@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:success] = "Por favor, revisa tu correo para activar la cuenta."
+      flash[:success] = "Se envió un enlace a tu correo para activar la cuenta"
       redirect_to root_url
     else
       render 'new'
@@ -37,13 +37,12 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-
   end
 
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Perfil actualizado"
+      flash[:success] = "Se actualizó con exito la nueva información de tu pérfil"
       redirect_to @user
     else
       render 'edit'
