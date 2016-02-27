@@ -11,11 +11,11 @@ class PasswordResetsController < ApplicationController
 
   def update
     if params[:user][:password].empty?
-      @user.errors.add(:password, 'Campo vacío. Escribe tu nueva clave.')
+      @user.errors.add(:password, "no puede quedar en blanco")
       render 'edit'
     elsif @user.update_attributes(user_params)
       log_in @user
-      flash[:success] = 'Tu clave fue actualizada correctamente.'
+      flash[:success] = "Realizado con exito el cambio de contraseña"
       redirect_to @user
     else
       render 'edit'
@@ -33,12 +33,12 @@ class PasswordResetsController < ApplicationController
       flash.now[:danger] = 'Correo no encontrado.'
       render 'new'
     end
-    end
+  end
 
   private
 
   def user_params
-    params.require[:user].permit(:password, :password_confirmation)
+    params.require(:user).permit(:password, :password_confirmation)
   end
 
   def get_user
@@ -46,7 +46,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def valid_user
-    unless @user && @user.activated? && @user.authenticated?(:reset, params[:id])
+    unless (@user && @user.activated? && @user.authenticated?(:reset, params[:id]))
       redirect_to root_url
     end
   end
