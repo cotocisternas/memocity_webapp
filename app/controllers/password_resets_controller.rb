@@ -11,7 +11,7 @@ class PasswordResetsController < ApplicationController
 
   def update
     if params[:user][:password].empty?
-      @user.errors.add(:password, "no puede quedar en blanco")
+      @user.errors.add(:password, "debes ingresar una contraseña")
       render 'edit'
     elsif @user.update_attributes(user_params)
       log_in @user
@@ -27,10 +27,10 @@ class PasswordResetsController < ApplicationController
     if @user
       @user.create_reset_digest
       @user.send_password_reset_email
-      flash[:info] = 'Correo enviado con las instrucciones para restablecer contraseña.'
+      flash[:info] = 'Se te envió un correo con las instrucciones para restablecer contraseña'
       redirect_to root_url
     else
-      flash.now[:danger] = 'Correo no encontrado.'
+      flash.now[:danger] = 'No hemos encontrado la cuenta con esta información'
       render 'new'
     end
   end
@@ -53,7 +53,7 @@ class PasswordResetsController < ApplicationController
 
   def check_expiration
     if @user.password_reset_expired?
-      flash[:danger] = 'Enlace de activación expirado.'
+      flash[:danger] = 'Enlace de activación de cuenta ha expiriado.'
       redirect_to new_password_reset_url
     end
   end
