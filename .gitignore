@@ -1,3 +1,7 @@
+#Memocity cache
+memocity_dev
+memocity_test
+
 
 # bundler state
 /.bundle
