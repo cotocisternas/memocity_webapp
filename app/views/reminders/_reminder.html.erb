@@ -10,7 +10,7 @@
       | Creado el
       <%= reminder.created_at.strftime("%d-%m-%Y") %>
       <% if current_user?(reminder.user) %>
-        <%= link_to "Eliminar", reminder, method: :delete, data: { confirm: "¿Estas seguro?"} %>
+        <%= link_to "Eliminar", reminder, method: :delete, data: { confirm: "¿Estas seguro que quieres eliminar el recordatorio?"} %>
       <% end %>
     </span>
   </p>
