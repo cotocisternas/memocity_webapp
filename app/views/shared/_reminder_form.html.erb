@@ -1,9 +1,9 @@
 <%= form_for(@reminder) do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 <div class="field">
-  <%= f.text_area :content, placeholder: "¿Qué quieres recordar?" %>
+  <%= f.text_area :content, placeholder: "¿Qué quieres recordar?", :maxlength=>"120" %>
   <b>Cuando activar :</b>
   <%= f.datetime_local_field :when_activate %>
 </div>
-<%= f.submit 'Crear el recordatorio', class: "btn btn-primary" %>
+<%= f.submit 'Agendar llamada', class: "btn btn-success" %>
 <% end %>
