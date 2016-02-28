@@ -15,7 +15,7 @@ class RemindersController < ApplicationController
 
   def destroy
     @reminder.destroy
-    flash[:success] = "Recordatorio eliminado"
+    flash[:success] = "Recordatorio eliminado."
     redirect_to request.referrer || root_url
   end
 

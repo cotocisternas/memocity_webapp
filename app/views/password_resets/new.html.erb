@@ -1,12 +1,9 @@
-<%= provide(:title, "Restablecer contraseña") %>
-<h1><%= yield(:title) %></h1>
-
+<%= provide(:title, "Recuperar cuenta") %>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    <h1><%= yield(:title) %></h1>
     <%= form_for(:password_reset, url: password_resets_path) do |f| %>
-    <p>
-      Escribe tu correo electronico.
-    </p>
+    <p>Ingresa tu correo electrónico</p>
     <%= f.email_field :email, class: 'form-control' %>
 
     <%= f.submit "Buscar", class: "btn btn-primary" %>

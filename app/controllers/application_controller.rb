@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   def logged_in_user
     unless logged_in?
       store_location
-      flash[:danger] = 'Por favor inicia sesión.'
+      flash[:danger] = 'La acción no es posible realizarla. Inicia sesión.'
       redirect_to login_url
     end
   end

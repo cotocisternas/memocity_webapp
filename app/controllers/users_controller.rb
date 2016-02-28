@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:success] = "Se envió un enlace a tu correo para activar la cuenta"
+      flash[:success] = "Se envió un enlace a tu correo para activar la cuenta."
       redirect_to root_url
     else
       render 'new'
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "Usuario eliminado"
+    flash[:success] = "Usuario eliminado."
     redirect_to users_url
   end
 
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Se actualizó con exito la nueva información de tu pérfil"
+      flash[:success] = "Se actualizó con exito la nueva información de tu cuenta."
       redirect_to @user
     else
       render 'edit'

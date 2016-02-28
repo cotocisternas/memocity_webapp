@@ -1,7 +1,7 @@
-<% provide(:title, 'Registrar') %>
-<h1><%= yield(:title) %></h1>
+<% provide(:title, 'Crear cuenta') %>
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
+		<h1><%= yield(:title) %></h1>
 		<%= form_for(@user)  do |f| %>
 		<%= render 'shared/error_messages', object: f.object %>
 		<%= f.text_field :name, class:"form-control", placeholder: "Nombre" %>
