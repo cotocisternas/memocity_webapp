@@ -1,19 +1,43 @@
 <% provide(:title, "Memocity") %>
 <div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1><%= @user.name.capitalize %>, te avisamos al número:
-        <%= @user.mobile_num %></h1>
-      <p>¿Algo interesante que recordar?</p>
-    </section>
-  </aside>
-  <div class="col-md-4">
-    <% if @user.reminders.any? %>
-    <h3>Recordatorios creados: <%= @user.reminders.count %></h3>
-    <ol class="reminders">
-      <%= render @reminders %>
-    </ol>
-    <%= will_paginate @reminders %>
-    <% end %>
-  </div>
+  <h2>Mi perfil</h2>
+  <h3>Hola <%= current_user.name %></h3>
+  <table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Detalles de</th>
+      <th>Tipo de cuenta</th>
+      <th>Recordatorios permitidos</th>
+      <th>Expira</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cuenta</td>
+      <td>Gratis</td>
+      <td>1 díario</td>
+      <td>Nunca</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Resumen de memocity</h2>
+
+<table class="table table-striped table-hover ">
+<thead>
+  <tr>
+    <th>Cantidad</th>
+    <th>Activos</th>
+    <th>Expirados</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= pluralize(current_user.reminders.count, "creados") %></td>
+    <td><span class="label label-success">Pronto</span></td>
+    <td><span class="label label-success">Pronto</span></td>
+  </tr>
+</tbody>
+</table>
+</div>
 </div>
