@@ -1,3 +1,4 @@
 <h1><%= current_user.name %></h1>
+<p>Tu actual número es: <%= current_user.mobile_num %></p>
 <span><%= link_to "Listar memos", current_user %></span>
 <span><%= pluralize(current_user.reminders.count, "recordatorios") %></span>
