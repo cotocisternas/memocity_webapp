@@ -4,7 +4,7 @@
     <nav>
       <div class="menu">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="https://memocity.herokuapp.com">Principal</a></li>
+          <li><%= link_to "Principal", root_path %></li>
           <li><%= link_to "Ayuda",   help_path %></li>
           <% if logged_in? %>
           <li><%= link_to "Usuarios", users_path %></li>
