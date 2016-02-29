@@ -12,7 +12,7 @@ class Reminder < ActiveRecord::Base
   private
 
   def eval_content_reminder
-    if content.empty?
+    if self.content.empty?
       errors.add :base, 'Contenido no puede quedar en blanco'
     elsif content.length > 120
       errors.add :base, 'El contenido no puede superar los 120 caracteres'
@@ -20,10 +20,10 @@ class Reminder < ActiveRecord::Base
   end
 
   def eval_when_activate
-    if when_activate.to_s.empty?
+    if self.when_activate.to_s.empty?
       errors.add :base, 'Fecha/Hora no fue ingresada'
     end
-    if when_activate.to_s == Time.zone.now.to_s
+    if self.when_activate.to_s == Time.zone.now.to_s
       errors.add :base, 'Fecha/Hora debe ser mayor a la actual'
     end
   end
