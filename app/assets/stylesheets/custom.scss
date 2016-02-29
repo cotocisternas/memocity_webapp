@@ -120,15 +120,6 @@ footer {
   }
 }
 
-/* miscellaneous */
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
-
 /* sidebar */
 aside {
   section {
@@ -165,13 +156,7 @@ select,
   margin-bottom: 15px;
   @include box_sizing;
 }
-#error_explanation {
-  color: $brand-danger;
-  ul {
-    list-style: none;
-    margin: 0 0 18px;
-  }
-}
+
 
 /* reminders */
 .reminders {
