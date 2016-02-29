@@ -8,7 +8,6 @@ class Reminder < ActiveRecord::Base
   validate :eval_when_activate
 
 
-
   private
 
   def eval_content_reminder
@@ -20,12 +19,12 @@ class Reminder < ActiveRecord::Base
   end
 
   def eval_when_activate
-    if self.when_activate.to_s.empty?
-      errors.add :base, 'Fecha/Hora no fue ingresada'
-    end
-    if self.when_activate.to_s == Time.zone.now.to_s
+    if when_activate.to_s.empty? || when_activate.to_s <= Time.zone.now.to_s
       errors.add :base, 'Fecha/Hora debe ser mayor a la actual'
     end
+    #if when_activate.to_s == Time.now.to_s
+    #  errors.add :base, 'Fecha/Hora debe ser mayor a la actual'
+    #end
   end
 
 
