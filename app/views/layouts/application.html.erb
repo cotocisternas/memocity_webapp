@@ -8,18 +8,21 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-		<br />
-		<div class="alert alert-warning" role="alert">Las llamadas aún no está disponible. Desarrollando...</div>
-		<%= render 'layouts/header' %>
 		<div class="container">
-			<% flash.each do |message_type, message| %>
-			<%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-		</div>
-		<% end %>
-		<%= yield %>
-		<%= render 'layouts/footer' %>
+			<br />
+			<div class="alert alert-warning" role="alert">Las llamadas aún no está disponible. Desarrollando...</div>
+			<%= render 'layouts/header' %>
+			<div class="container">
+				<% flash.each do |message_type, message| %>
+				<%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+			</div>
+			<% end %>
+			<%= yield %>
+			<%= render 'layouts/footer' %>
 
-	</div>
+		</div>
+		</div>
+
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
